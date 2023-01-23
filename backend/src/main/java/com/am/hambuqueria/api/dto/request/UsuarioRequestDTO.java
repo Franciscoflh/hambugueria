@@ -6,12 +6,5 @@ import lombok.Data;
 
 @Data
 public class UsuarioRequestDTO {
-    @NotBlank
-    private String email;
 
-    @NotBlank
-    private String senha;
-
-    @NotBlank
-    private String nome;
 }

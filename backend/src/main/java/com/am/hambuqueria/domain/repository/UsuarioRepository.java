@@ -11,9 +11,5 @@ import com.am.hambuqueria.domain.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    List<Usuario> findByNomeContainsIgnoreCase(String nome);
 
-    List<Usuario> findByEmailContainsIgnoreCase(String email);
-
-    Page<Usuario> findByNomeContainsIgnoreCase(String nome, Pageable paginacao);
 }
