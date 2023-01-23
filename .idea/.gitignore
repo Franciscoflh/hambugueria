@@ -6,5 +6,11 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+<<<<<<< HEAD
+<<<<<<< HEAD
 # Zeppelin ignored files
 /ZeppelinRemoteNotebooks/
+=======
+>>>>>>> a122509 (Update README)
+=======
+>>>>>>> origin/LUC-39-projeto-hamburgueria-definir-entidades
