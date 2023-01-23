@@ -22,7 +22,7 @@ import javax.validation.constraints.Size;
 public class Usuario {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codigo_cliente")
-    private Long id;
+    private Integer id;
 
     @NotBlank
     @Size(min = 3, max = 100)
