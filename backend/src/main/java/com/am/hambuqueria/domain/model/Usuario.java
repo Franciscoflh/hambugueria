@@ -12,16 +12,16 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 /*  Classe de modelo de Usuário  */
 public class Usuario {
-    @EqualsAndHashCode.Include
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codigo_cliente")
     private Long id;
 
     @NotBlank
@@ -35,4 +35,10 @@ public class Usuario {
     @NotBlank
     @Size(min = 6, max = 16)
     private String senha;
+
+    @Size(max = 30)
+    private String telefone;
+
+    @Size(max = 30)
+    private String endereco;
 }
