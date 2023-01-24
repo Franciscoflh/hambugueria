@@ -1,2 +1,0 @@
-INSERT INTO `usuario` (`nome`,`email`,`senha`) VALUES ('Caio Roger Santiago','caio@email.com','senhaMaisTop');
-INSERT INTO `usuario` (`nome`,`email`,`senha`) VALUES ('Lucas Felipe','lucasfelipe@hotmail.com','senhatop');

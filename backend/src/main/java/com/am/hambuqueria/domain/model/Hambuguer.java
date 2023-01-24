@@ -30,7 +30,7 @@ public class Hambuguer {
     @NotBlank
     private String ingredientes;
 
-    //@ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    //@JoinColumn(name = "codigo_usuario", referencedColumnName = "codigo_usuario")
-    //private List<Usuario> usuario;
+    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "codigo_usuario", referencedColumnName = "codigo_usuario")
+    private List<Usuario> usuarios;
 }

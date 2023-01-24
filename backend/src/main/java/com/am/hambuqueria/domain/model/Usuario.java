@@ -37,6 +37,6 @@ public class Usuario {
     @Size(max = 30)
     private String endereco;
 
-    //@ManyToMany(cascade = CascadeType.ALL, mappedBy = "Usuario")
-    //private List<Hambuguer> hambuguer;
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "Usuario")
+    private List<Hambuguer> hambuguers;
 }
