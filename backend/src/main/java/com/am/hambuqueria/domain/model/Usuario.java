@@ -1,16 +1,11 @@
 package com.am.hambuqueria.domain.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,7 +16,7 @@ import javax.validation.constraints.Size;
 /*  Classe de modelo de Usuário  */
 public class Usuario {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "codigo_cliente")
+    @Column(name = "codigo_usuario")
     private Integer id;
 
     @NotBlank
@@ -41,4 +36,7 @@ public class Usuario {
 
     @Size(max = 30)
     private String endereco;
+
+    //@ManyToMany(cascade = CascadeType.ALL, mappedBy = "Usuario")
+    //private List<Hambuguer> hambuguer;
 }
