@@ -25,3 +25,6 @@ Essa entidade é caracterizada por representar a generalização de cliente e ad
 
 ## Hamburguer
 Essa entidade é caracterizada por representar a definição de hamburguer, , tendo isso em vista, temos as funções abaixo para a entidade:
+
+<!-- Links de Exemplo -->
+[example.projeto.burguer]: [https://github.com/tomtom28/springBurger]
