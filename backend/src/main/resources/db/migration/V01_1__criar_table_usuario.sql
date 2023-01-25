@@ -5,6 +5,6 @@ CREATE TABLE usuario
     email          VARCHAR(45)        NULL,
     senha          VARCHAR(16)        NULL,
     telefone       VARCHAR(30)        NULL,
-    endereco       VARCHAR(30)        NULL,
+    endereco       VARCHAR(100)        NULL,
     CONSTRAINT pk_usuario PRIMARY KEY (codigo_usuario)
 );
