@@ -1,6 +1,7 @@
 package com.am.hambuqueria.domain.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
@@ -14,4 +15,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     List<Usuario> findByNomeContaining(@NonNull String nome);
 
     Usuario findByEmail(@NonNull String email);
+
+    Usuario findById(int expectedId);
 }
