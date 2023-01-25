@@ -3,7 +3,9 @@ package com.am.hambuqueria.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
@@ -23,7 +25,10 @@ public class Pedido {
     @JoinColumn(name = "codigo_usuario", referencedColumnName = "codigo_usuario")
     private Usuario usuario;
 
-    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "codigo_burguer", referencedColumnName = "codigo_burguer")
-    private List<Hambuguer> hambuguers;
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(name = "burguer_pedido",
+            joinColumns = {@JoinColumn(name = "codigo_burguer")},
+            inverseJoinColumns = {@JoinColumn(name = "codigo_pedido")}
+    )
+    private Set<Hambuguer> hambuguers = new HashSet<Hambuguer>();
 }

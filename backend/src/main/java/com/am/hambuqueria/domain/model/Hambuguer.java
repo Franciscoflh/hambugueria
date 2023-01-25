@@ -5,7 +5,9 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -31,7 +33,6 @@ public class Hambuguer {
     @NotBlank
     private String ingredientes;
 
-    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "codigo_pedidos")
-    private List<Pedido> pedidos;
+    @ManyToMany(mappedBy = "hambuguers", cascade = { CascadeType.ALL })
+    private Set<Pedido> pedidos = new HashSet<Pedido>();
 }
