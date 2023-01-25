@@ -37,6 +37,7 @@ public class Usuario {
     @Size(max = 30)
     private String endereco;
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "Usuario")
+    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "codigo_burguer", referencedColumnName = "codigo_burguer")
     private List<Hambuguer> hambuguers;
 }
