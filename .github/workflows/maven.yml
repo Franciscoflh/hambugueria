@@ -29,7 +29,7 @@ jobs:
       run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
  
     - name: Build report test
-      uses: dorny/test-report@v1
+      uses: dorny/test-reporter@v1
       if: always()
       with:
         name: Maven Tests
