@@ -32,6 +32,6 @@ public class Hambuguer {
     private String ingredientes;
 
     @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "codigo_pedidos", referencedColumnName = "codigo_pedido")
+    @JoinColumn(name = "codigo_pedidos")
     private List<Pedido> pedidos;
 }
