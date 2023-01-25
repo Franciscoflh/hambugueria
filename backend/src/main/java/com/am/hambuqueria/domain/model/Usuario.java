@@ -34,7 +34,7 @@ public class Usuario {
     @Size(max = 30)
     private String telefone;
 
-    @Size(max = 30)
+    @Size(max = 100)
     private String endereco;
 
     @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
