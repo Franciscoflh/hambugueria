@@ -14,10 +14,10 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Hambuguer {
+public class Comida {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "codigo_burguer")
+    @Column(name = "codigo_comida")
     private Integer id;
 
     @NotBlank
@@ -32,6 +32,6 @@ public class Hambuguer {
     @NotBlank
     private String ingredientes;
 
-    @ManyToMany(mappedBy = "hambuguers", cascade = { CascadeType.ALL })
+    @ManyToMany(mappedBy = "comidas", cascade = { CascadeType.ALL })
     private Set<Pedido> pedidos = new HashSet<Pedido>();
 }

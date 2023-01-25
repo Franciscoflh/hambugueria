@@ -1,18 +1,18 @@
-CREATE TABLE burguer_pedido
+CREATE TABLE comida_pedido
 (
-    codigo_burguer INT NOT NULL,
+    codigo_comida INT NOT NULL,
     codigo_pedido  INT NOT NULL,
-    CONSTRAINT pk_burguer_pedido PRIMARY KEY (codigo_burguer, codigo_pedido)
+    CONSTRAINT pk_burguer_pedido PRIMARY KEY (codigo_comida, codigo_pedido)
 );
 
-CREATE TABLE hambuguer
+CREATE TABLE comida
 (
-    codigo_burguer INT AUTO_INCREMENT NOT NULL,
+    codigo_comida  INT AUTO_INCREMENT NOT NULL,
     nome           VARCHAR(100) NULL,
     `descrição`    VARCHAR(255) NULL,
     preco          INT NULL,
     ingredientes   VARCHAR(255) NULL,
-    CONSTRAINT pk_hambuguer PRIMARY KEY (codigo_burguer)
+    CONSTRAINT pk_comida PRIMARY KEY (codigo_comida)
 );
 
 CREATE TABLE pedido

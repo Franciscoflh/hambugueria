@@ -25,9 +25,9 @@ public class Pedido {
     private Usuario usuario;
 
     @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(name = "burguer_pedido",
-            joinColumns = {@JoinColumn(name = "codigo_burguer")},
+    @JoinTable(name = "comida_pedido",
+            joinColumns = {@JoinColumn(name = "codigo_comida")},
             inverseJoinColumns = {@JoinColumn(name = "codigo_pedido")}
     )
-    private Set<Hambuguer> hambuguers = new HashSet<Hambuguer>();
+    private Set<Comida> comidas = new HashSet<Comida>();
 }
