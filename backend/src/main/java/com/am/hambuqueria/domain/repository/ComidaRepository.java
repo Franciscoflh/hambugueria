@@ -8,9 +8,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface HamburguerRepository extends JpaRepository<Comida, Integer> {
+public interface ComidaRepository extends JpaRepository<Comida, Integer> {
     Comida findById(@NonNull int expectedId);
 
     List<Comida> findByNomeContaining(@NonNull String nome);
+
+    List<Comida> findAll();
 
 }
