@@ -15,7 +15,8 @@ import java.util.List;
 @ToString
 /*  Classe de modelo de Usuário  */
 public class Usuario {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codigo_usuario")
     private Integer id;
 
@@ -23,11 +24,9 @@ public class Usuario {
     @Size(min = 3, max = 100)
     private String nome;
 
-    @NotBlank
     @Size(min = 5, max = 45)
     private String email;
 
-    @NotBlank
     @Size(min = 6, max = 16)
     private String senha;
 
@@ -37,7 +36,7 @@ public class Usuario {
     @Size(max = 100)
     private String endereco;
 
-    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "codigo_burguer", referencedColumnName = "codigo_burguer")
-    private List<Hambuguer> hambuguers;
+    @OneToMany
+    @JoinColumn(name = "codigo_pedido")
+    private List<Pedido> pedidos;
 }

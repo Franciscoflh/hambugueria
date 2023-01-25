@@ -14,7 +14,8 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 public class Hambuguer {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codigo_burguer")
     private Integer id;
 
@@ -31,6 +32,6 @@ public class Hambuguer {
     private String ingredientes;
 
     @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "codigo_usuario", referencedColumnName = "codigo_usuario")
-    private List<Usuario> usuarios;
+    @JoinColumn(name = "codigo_pedidos", referencedColumnName = "codigo_pedido")
+    private List<Pedido> pedidos;
 }
