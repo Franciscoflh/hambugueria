@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="JpaLiquibaseChangesConfig">
+    <exclude-change idName="fk_burped_on_pedido" tagName="addForeignKeyConstraint" />
+    <exclude-change idName="FK_PEDIDO_ON_CODIGO_PEDIDO" tagName="addForeignKeyConstraint" />
+    <exclude-change idName="FK_PEDIDO_ON_CODIGO_USUARIO" tagName="addForeignKeyConstraint" />
+    <exclude-change idName="fk_burped_on_hambuguer" tagName="addForeignKeyConstraint" />
+    <exclude-change idName="burguer_pedido" tagName="createTable" />
+    <exclude-change idName="pedido" tagName="createTable" />
+    <exclude-change idName="hambuguer" tagName="createTable" />
+    <exclude-change idName="usuario" tagName="createTable" />
+  </component>
   <component name="JpaPluginProjectSettings" repositoryEqualityConditionTypes="0, 1, 2" repositoryVerbConditionTypes="3, 4, 5" repositoryOtherConditionTypes="3, 1" dtoClassNamePostfix="DTO" />
 </project>
