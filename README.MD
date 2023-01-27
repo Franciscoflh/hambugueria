@@ -15,3 +15,4 @@ O objeito desse projeto é permitir o gerenciamento de pedidos, entregas de uma 
 ## 👤 Autor
 
 - [@LucasFelip](https://www.github.com/LucasFelips)
+- [@Franciscoflh](https://github.com/Franciscoflh)
