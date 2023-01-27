@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AberturaController {
     @GetMapping
-    public String imobiliaria() {
+    public String hamburgueria() {
         String url = "https://github.com/LucasFelip";
         return "BEM VINDO A API DE HAMBURGUERIA                    → Desenvolvido por Lucas Felipe " + url;
     }
