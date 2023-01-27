@@ -34,4 +34,7 @@ public class Comida {
 
     @ManyToMany(mappedBy = "comidas", cascade = { CascadeType.ALL })
     private Set<Pedido> pedidos = new HashSet<Pedido>();
+
+    @NotBlank
+    private TipoComida tipoComida;
 }
